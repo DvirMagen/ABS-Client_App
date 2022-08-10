@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.scenes.dashboard.CustomerDashboardScene">
+   <children>
+      <BorderPane layoutY="-14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane fx:id="tab_pane_id" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                  <Tab id="load_file_tab" text="Load File">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="740.0" prefWidth="1017.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label styleClass="head-line-label" stylesheets="@../../resources/files/Discount.css" text="A.B.S" />
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/images/main_mini_logo.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label styleClass="head-line-label" stylesheets="@../../resources/files/Discount.css" text="Alternative Banking System" />
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets left="15.0" right="15.0" top="15.0" />
+                                       </BorderPane.margin>
+                                    </VBox>
+                                 </top>
+                                 <center>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <TextField fx:id="file_path_textfield_load_file" editable="false" />
+                                          <HBox alignment="CENTER" prefHeight="86.0" spacing="50.0" styleClass="color-background" stylesheets="@../../resources/files/Discount.css">
+                                             <children>
+                                                <Button fx:id="analyze_btn_load_file" disable="true" mnemonicParsing="false" onAction="#onClickAnalyzeFile" prefHeight="47.0" prefWidth="120.0" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Analyze" />
+                                                <Button fx:id="choose_file_btn_load_file" mnemonicParsing="false" onAction="#onClickCustomerSelectFile" prefHeight="47.0" prefWidth="119.0" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Choose File" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="15.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets left="15.0" right="15.0" top="50.0" />
+                                       </BorderPane.margin>
+                                    </VBox>
+                                 </center>
+                                 <bottom>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label fx:id="error_label_load_file" text="Label" visible="false">
+                                             <font>
+                                                <Font name="Bodoni MT" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab fx:id="information_tab" text="Information">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" styleClass="background" stylesheets="@../../resources/files/Discount.css">
+                            <children>
+                                <GridPane hgap="5.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="418.0" />
+                                        <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="217.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="ALWAYS" />
+                                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="ALWAYS" />
+                                    </rowConstraints>
+                                    <children>
+                                        <AnchorPane GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2147483647" GridPane.vgrow="ALWAYS">
+                                            <children>
+                                                <TableView fx:id="customer_transaction_tableview" prefHeight="646.0" prefWidth="260.0" stylesheets="@../../resources/files/Discount.css" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="customer_transaction_tablecolumn" prefWidth="192.0" text="  Account Transactions" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                                <Button fx:id="withdraw_btn" layoutX="127.0" layoutY="650.0" mnemonicParsing="false" onAction="#onClickWithdrawBtn" styleClass="withdraw-btn" stylesheets="@../../resources/files/Discount.css" text="Withdraw" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="5.0" />
+                                                <Button fx:id="charge_btn" layoutX="22.0" layoutY="650.0" mnemonicParsing="false" onAction="#onClickChargeBtn" prefHeight="47.0" prefWidth="87.0" styleClass="charge-btn" stylesheets="@../../resources/files/Discount.css" text="Charge" textAlignment="CENTER" textOverrun="CLIP" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="5.0" />
+                                            </children>
+                                        </AnchorPane>
+                                        <BorderPane stylesheets="@../../resources/files/Discount.css">
+                                            <center>
+                                                <TableView fx:id="customer_borrower_tableview" cache="true" stylesheets="@../../resources/files/Discount.css">
+                                                    <columns>
+                                                        <TableColumn fx:id="customer_borrower_id_column" editable="false" prefWidth="75.0" sortable="false" text="Loan ID" />
+                                                        <TableColumn fx:id="customer_borrower_category_column" editable="false" prefWidth="75.0" sortable="false" text="Category" />
+                                                        <TableColumn fx:id="customer_borrower_payed_column" editable="false" prefWidth="75.0" sortable="false" text="Loan Payed" />
+                                                        <TableColumn fx:id="customer_borrower_status_column" editable="false" prefWidth="75.0" sortable="false" text="Status" />
+                                                        <TableColumn fx:id="customer_borrower_capital_column" editable="false" prefWidth="75.0" sortType="DESCENDING" sortable="false" text="Capital" />
+                                                        <TableColumn fx:id="customer_borrower_total_time_column" editable="false" prefWidth="75.0" sortable="false" text="Total Time" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </center>
+                                            <top>
+                                                <Label styleClass="head-line-label" stylesheets="@../../resources/files/Discount.css" text="Loans Info" textFill="#2800c9" BorderPane.alignment="CENTER">
+                                                    <BorderPane.margin>
+                                                        <Insets bottom="2.0" top="2.0" />
+                                                    </BorderPane.margin></Label>
+                                            </top>
+                                        </BorderPane>
+                                        <BorderPane GridPane.rowIndex="1">
+                                            <center>
+                                                <TableView fx:id="customer_lender_tableview" stylesheets="@../../resources/files/Discount.css">
+                                                    <columns>
+                                                        <TableColumn fx:id="customer_lender_id_column" editable="false" prefWidth="75.0" sortable="false" text="Loan ID" />
+                                                        <TableColumn fx:id="investment_owner_column" prefWidth="75.0" text="Owner" />
+                                                        <TableColumn fx:id="customer_lender_category_column" editable="false" prefWidth="75.0" sortable="false" text="Category" />
+                                                        <TableColumn fx:id="customer_lender_payed_column" editable="false" prefWidth="75.0" sortable="false" text="Loan Payed" />
+                                                        <TableColumn fx:id="customer_lender_status_column" editable="false" prefWidth="75.0" sortable="false" text="Status" />
+                                                        <TableColumn fx:id="customer_lender_capital_column" editable="false" prefWidth="75.0" sortable="false" text="Capital" />
+                                                        <TableColumn fx:id="customer_lender_total_time_column" editable="false" prefWidth="75.0" sortable="false" text="Total Time" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </center>
+                                            <top>
+                                          <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+                                             <BorderPane.margin>
+                                                <Insets bottom="2.0" top="2.0" />
+                                             </BorderPane.margin>
+                                             <children>
+                                                <Separator prefHeight="24.0" prefWidth="782.0" />
+                                                      <Label styleClass="head-line-label" stylesheets="@../../resources/files/Discount.css" text="Investments Info" textFill="#3500d3" />
+                                             </children>
+                                          </VBox>
+                                            </top>
+                                        </BorderPane>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </GridPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                  <Tab fx:id="scramble_tab" text="Scramble">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="581.0" styleClass="background" stylesheets="@../../resources/files/Discount.css">
+                              <children>
+                                  <BorderPane layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <top>
+                                          <GridPane hgap="10.0" prefHeight="50.0" vgap="5.0" BorderPane.alignment="CENTER">
+                                              <columnConstraints>
+                                                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="613.0" minWidth="506.0" prefWidth="506.0" />
+                                                  <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="ALWAYS" minWidth="-Infinity" />
+                                              </columnConstraints>
+                                              <rowConstraints>
+                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                  <RowConstraints maxHeight="95.0" minHeight="37.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                                  <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                                              </rowConstraints>
+                                              <children>
+                                                  <HBox alignment="BASELINE_RIGHT" minHeight="-Infinity" minWidth="-Infinity" spacing="7.0">
+                                                      <children>
+                                                          <Label alignment="BOTTOM_CENTER" text="Enter an amount to invest in this round">
+                                                              <HBox.margin>
+                                                                  <Insets />
+                                                              </HBox.margin>
+                                                              <font>
+                                                                  <Font name="Calibri Bold Italic" size="17.0" />
+                                                              </font>
+                                                          </Label>
+                                                          <TextField fx:id="amount_for_round_textfield" accessibleText="Integer" alignment="BOTTOM_LEFT">
+                                                              <HBox.margin>
+                                                                  <Insets bottom="1.0" top="3.0" />
+                                                              </HBox.margin>
+                                                          </TextField>
+                                                      </children>
+                                                  </HBox>
+                                                  <HBox alignment="BASELINE_RIGHT" spacing="7.0" GridPane.rowIndex="1">
+                                                      <children>
+                                                          <Label text="Minimum interest rate">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="16.0" />
+                                                   </font></Label>
+                                                          <TextField fx:id="minimum_interest_rate_textfield" alignment="BOTTOM_LEFT">
+                                                              <HBox.margin>
+                                                                  <Insets />
+                                                              </HBox.margin>
+                                                          </TextField>
+                                                      </children>
+                                                  </HBox>
+                                                  <HBox alignment="BASELINE_RIGHT" spacing="7.0" GridPane.rowIndex="2">
+                                                      <children>
+                                                          <Label text="Minimum Yaz for the loan">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="16.0" />
+                                                   </font></Label>
+                                                          <TextField fx:id="min_yaz_textfield" alignment="BOTTOM_LEFT">
+                                                              <HBox.margin>
+                                                                  <Insets />
+                                                              </HBox.margin>
+                                                          </TextField>
+                                                      </children>
+                                                  </HBox>
+                                                  <HBox alignment="BASELINE_LEFT" GridPane.columnIndex="1">
+                                                      <children>
+                                                          <ComboBox fx:id="categories_combobox" prefHeight="39.0" prefWidth="325.0" promptText="Categoties" styleClass="combobox" stylesheets="@../../resources/files/Discount.css">
+                                                              <HBox.margin>
+                                                                  <Insets />
+                                                              </HBox.margin>
+                                                          </ComboBox>
+                                                      </children>
+                                                      <padding>
+                                                          <Insets right="10.0" />
+                                                      </padding>
+                                                  </HBox>
+                                                  <HBox alignment="TOP_RIGHT" prefHeight="37.0" prefWidth="469.0" spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                      <children>
+                                                          <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" prefHeight="22.0" prefWidth="241.0" text="Maximum percentage of ownership" textAlignment="JUSTIFY">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="16.0" />
+                                                   </font></Label>
+                                                          <TextField fx:id="max_ownership_textfield" alignment="BOTTOM_LEFT" />
+                                                      </children>
+                                                      <padding>
+                                                          <Insets left="5.0" right="10.0" />
+                                                      </padding></HBox>
+                                                  <HBox alignment="TOP_RIGHT" fillHeight="false" prefHeight="35.0" prefWidth="469.0" spacing="7.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+                                                      <children>
+                                                          <Label text="Maximum open loans">
+                                                   <font>
+                                                      <Font name="Calibri Italic" size="16.0" />
+                                                   </font></Label>
+                                                          <TextField fx:id="max_open_loans_textfield" alignment="BOTTOM_LEFT" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="NEVER" />
+                                                      </children>
+                                                      <padding>
+                                                          <Insets left="4.0" right="10.0" />
+                                                      </padding></HBox>
+                                              </children>
+                                              <padding>
+                                                  <Insets top="4.0" />
+                                              </padding>
+                                          </GridPane>
+                                      </top>
+                                      <bottom>
+                                          <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+                                              <children>
+                                                  <VBox alignment="CENTER" spacing="5.0">
+                                                      <children>
+                                                          <Label fx:id="error_label" alignment="CENTER" contentDisplay="CENTER" disable="true" />
+                                                          <Button fx:id="filter_btn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickFilter" prefHeight="47.0" prefWidth="138.0" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Filter" />
+                                                      </children>
+                                                      <HBox.margin>
+                                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                      </HBox.margin>
+                                                  </VBox>
+                                              </children>
+                                          </HBox>
+                                      </bottom>
+                                      <center>
+                                          <TableView fx:id="scramble_tableview" prefHeight="572.0" prefWidth="1024.0" stylesheets="@../../resources/files/Discount.css" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                                              <columns>
+                                                  <TableColumn fx:id="scramble_loan_id_column" editable="false" prefWidth="153.0" sortable="false" text="Loan ID" />
+                                                  <TableColumn fx:id="scramble_loan_owner_column" editable="false" prefWidth="75.0" sortable="false" text="Owner" />
+                                                  <TableColumn fx:id="scramble_loan_category_column" editable="false" prefWidth="75.0" sortable="false" text="Category" />
+                                                  <TableColumn fx:id="scramble_loan_status_column" editable="false" prefWidth="75.0" sortable="false" text="Status" />
+                                                  <TableColumn fx:id="scramble_loan_capital_column" editable="false" prefWidth="75.0" sortable="false" text="Capital" />
+                                                  <TableColumn fx:id="scramble_loan_total_time_column" editable="false" prefWidth="98.0" sortable="false" text="Total Yaz" />
+                                              </columns>
+                                              <columnResizePolicy>
+                                                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                              </columnResizePolicy>
+                                              <BorderPane.margin>
+                                                  <Insets top="5.0" />
+                                              </BorderPane.margin>
+                                          </TableView>
+                                      </center>
+                                  </BorderPane>
+                              </children></AnchorPane>
+                      </content>
+                  </Tab>
+                  <Tab fx:id="payment_tab" text="Payment">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../../resources/files/Discount.css">
+                              <children>
+                                  <GridPane hgap="5.0" layoutX="-2.0" layoutY="-3.0" prefWidth="660.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
+                                          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints vgrow="ALWAYS" />
+                                      </rowConstraints>
+                                      <children>
+                                          <BorderPane>
+                                              <center>
+                                                  <TableView fx:id="payment_tableview" stylesheets="@../../resources/files/Discount.css">
+                                                      <columns>
+                                                          <TableColumn fx:id="payment_loan_id_column" maxWidth="135.0" minWidth="91.0" prefWidth="120.0" text="Loan ID" />
+                                                          <TableColumn fx:id="payment_owner_column" editable="false" maxWidth="149.0" minWidth="65.0" sortable="false" text="Owner" />
+                                                          <TableColumn fx:id="payment_interest_rate_column" maxWidth="167.0" minWidth="66.0" prefWidth="101.0" text="Interest rate" />
+                                                          <TableColumn fx:id="payment_total_invest_column" maxWidth="221.0" minWidth="25.0" prefWidth="115.0" text="Total Invest" />
+                                                          <TableColumn fx:id="payment_status_column" maxWidth="280.0" minWidth="44.0" prefWidth="99.0" text="Status" />
+                                                          <TableColumn fx:id="payment_upcoming_pay_column" maxWidth="280.0" minWidth="120.0" prefWidth="192.0" text="Upcoming Payment" />
+                                                          <TableColumn fx:id="payment_checkbox_column" editable="false" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" sortable="false" visible="false" />
+                                                      </columns>
+                                                      <columnResizePolicy>
+                                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                      </columnResizePolicy>
+                                                  </TableView>
+                                              </center>
+                                              <bottom>
+                                                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="667.0" spacing="20.0" BorderPane.alignment="CENTER">
+                                                      <children>
+                                                          <Button fx:id="clear_all_btn" mnemonicParsing="false" onAction="#uncheckAllCheckBoxes" prefHeight="47.0" prefWidth="111.0" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Clear All" />
+                                                          <Button fx:id="pay_btn" disable="true" mnemonicParsing="false" onAction="#onClickPayAllSelectedLoans" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Pay Selected Payments" />
+                                                      </children>
+                                                      <BorderPane.margin>
+                                                          <Insets bottom="5.0" top="15.0" />
+                                                      </BorderPane.margin>
+                                                  </HBox>
+                                              </bottom>
+                                          </BorderPane>
+                                          <VBox alignment="TOP_CENTER" maxWidth="310.0" prefHeight="700.0" prefWidth="310.0" GridPane.columnIndex="1">
+                                              <children>
+                                                  <Label contentDisplay="CENTER" styleClass="head-line-label" stylesheets="@../../resources/files/Discount.css" text="Notifications" textFill="#2828a1c9">
+                                                      <font>
+                                                          <Font name="Book Antiqua Bold" size="30.0" />
+                                                      </font>
+                                                  </Label>
+                                                  <TextArea fx:id="notifications_text_erea" editable="false" prefHeight="655.0" prefWidth="310.0" wrapText="true" VBox.vgrow="ALWAYS" />
+                                              </children>
+                                              <GridPane.margin>
+                                                  <Insets bottom="15.0" />
+                                              </GridPane.margin>
+                                          </VBox>
+                                      </children>
+                                  </GridPane>
+                              </children></AnchorPane>
+                      </content>
+                  </Tab>
+                  <Tab fx:id="loans_for_sale_tab" text="Loans For Sale">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background" stylesheets="@../../resources/files/Discount.css">
+                           <children>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <TableView fx:id="loans_for_sale_tableview" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../resources/files/Discount.css" BorderPane.alignment="CENTER">
+                                      <columns>
+                                        <TableColumn fx:id="loans_for_sale_id_column" prefWidth="75.0" text="Loan ID" />
+                                        <TableColumn fx:id="loans_for_sale_owner_column" prefWidth="75.0" text="Owner" />
+                                          <TableColumn fx:id="loans_for_sale_category_column" prefWidth="75.0" text="Category" />
+                                          <TableColumn fx:id="loans_for_sale_capital_column" prefWidth="75.0" text="Capital" />
+                                          <TableColumn fx:id="loans_for_sale_interist_rate_column" prefWidth="75.0" text="Interist Rate" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </BorderPane.margin>
+                                    </TableView>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </TabPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="59.0" prefWidth="793.0" styleClass="background" stylesheets="@../../resources/files/Discount.css" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="200.0" layoutY="19.0" spacing="5.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="1.0">
+                     <children>
+                        <Label fx:id="current_yaz_time_label_customer_dashboard" alignment="CENTER" contentDisplay="CENTER" text="Time Unit: ">
+                           <font>
+                              <Font name="Calibri Italic" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dashboard_error_label" alignment="CENTER" text="Label" textFill="#da3636" visible="false">
+                           <font>
+                              <Font name="Bell MT" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button fx:id="customer_logout_btn" layoutX="14.0" layoutY="6.0" mnemonicParsing="false" onAction="#logoutClicked" prefHeight="23.0" prefWidth="95.0" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Log Out" />
+                  <Button fx:id="create_new_loan_btn" layoutX="872.0" layoutY="6.0" mnemonicParsing="false" onAction="#onClickNewLoanButton" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Create New Loan" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="10.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </AnchorPane>
+         </bottom>
+         <top>
+            <VBox spacing="5.0" styleClass="background" stylesheets="@../../resources/files/Discount.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="welcome_customer_label_dashboard" text="Welcome,">
+                     <font>
+                        <Font name="Bell MT Italic" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="balance_customer_label_dashboard" text="Balance: ">
+                     <font>
+                        <Font name="Bell MT Italic" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

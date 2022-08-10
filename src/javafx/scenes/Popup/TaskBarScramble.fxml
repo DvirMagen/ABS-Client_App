@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.scenes.Popup.TaskBarScramble">
+    <children>
+        <BorderPane layoutX="-6.0" layoutY="-1.0" prefHeight="521.0" prefWidth="649.0">
+            <center>
+                <VBox alignment="CENTER_LEFT" prefHeight="160.0" prefWidth="649.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="progress_status_label" text="Label">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label fx:id="progress_precent_label" text="Label">
+                                    <VBox.margin>
+                                        <Insets bottom="7.0" left="30.0" right="20.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <ProgressBar fx:id="progressbar" prefHeight="23.0" prefWidth="623.0" progress="0.0">
+                                    <VBox.margin>
+                                        <Insets right="10.0" />
+                                    </VBox.margin>
+                                </ProgressBar>
+                            </children>
+                        </VBox>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets left="15.0" />
+                    </BorderPane.margin>
+                </VBox>
+            </center>
+            <top>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="67.0" layoutY="47.0" prefHeight="53.0" prefWidth="516.0" text="Loading Loans..." AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="47.0">
+                            <font>
+                                <Font name="Calibri Bold Italic" size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </top>
+            <bottom>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="ok_btn" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="304.0" layoutY="69.0" mnemonicParsing="false" onAction="#onCloseButtonClick" text="OK" />
+                    </children>
+                </AnchorPane>
+            </bottom>
+        </BorderPane>
+    </children>
+</Pane>

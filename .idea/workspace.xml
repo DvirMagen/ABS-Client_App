@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80b9058d-7a9b-49ca-92a8-884acdedaa64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/customer_utills/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/customer_utills/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/customer_utills/Loan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/customer_utills/PaymentView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/customer_utills/XmlPathIsDoesNotEndAsNeededException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/customer_utills/http/HttpClientUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/customer_utills/http/SimpleCookieManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/ABS_Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/files/AdminScene.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/files/Casual.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/files/CustomerScene.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/files/Discount.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/files/MainScene.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/images/WarningSign.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/images/charge_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/images/charge_mini_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/images/download_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/images/main_mini_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/images/withdraw_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/resources/images/withdraw_mini_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/Popup/TaskBarScramble.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/Popup/TaskBarScramble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/BalanceRefresher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/BorrowerInfoRefresher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/CustomerDashboardScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/CustomerDashboardScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/IsRewindModeRefresher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/LenderInfoRefresher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/LoansForSaleRefresher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/NotificationsRefresher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/PaymentsRefresher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/TimeUnitRefresher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/dashboard/TransactionsRefresher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/loadFile/CustomerLoadFileScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/loadFile/CustomerLoadFileScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/login/CustomerLoginScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/login/CustomerLoginScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/newLoan/NewLoanWindow.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javafx/scenes/newLoan/NewLoanWindow.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DAJ38GZJWnIVOElDHJbF4DBzeB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/User/Desktop/java for git/ABS-Client_App",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\java for git\ABS-Client_App" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ABS_Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javafx.ABS_Client" />
+      <module name="ABS-Client_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javafx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ABS_Client" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80b9058d-7a9b-49ca-92a8-884acdedaa64" name="Changes" comment="" />
+      <created>1660135761944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660135761944</updated>
+      <workItem from="1660135763498" duration="588000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/customer_utills/Loan.java</url>
+          <line>403</line>
+          <properties class="customer_utills.Loan" method="leftToFund">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

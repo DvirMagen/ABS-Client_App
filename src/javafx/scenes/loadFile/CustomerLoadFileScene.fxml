@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.scenes.loadFile.CustomerLoadFileScene">
+   <children>
+      <BorderPane layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="welcome_client_username_load_file_scene" text="Label">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Bell MT Italic" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label styleClass="head-line-label" stylesheets="@../../resources/files/Discount.css" text="A.B.S" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/main_mini_logo.png" />
+                     </image></ImageView>
+                  <Label styleClass="head-line-label" stylesheets="@../../resources/files/Discount.css" text="Alternative Banking System" />
+               </children>
+               <BorderPane.margin>
+                  <Insets top="15.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="customer_file_path_textfield" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                     <children>
+                        <Button fx:id="customer_analyze_btn_load_file_page" disable="true" mnemonicParsing="false" onAction="#onClickAnalyzeFile" prefHeight="47.0" prefWidth="127.0" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Analyze" />
+                        <Button fx:id="customer_choose_file_btn_load_file_page" mnemonicParsing="false" onAction="#onClickCustomerSelectFile" prefHeight="47.0" prefWidth="127.0" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Choose File" />
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="15.0" right="15.0" top="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <bottom>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="customer_error_label_load_file_scene" text="Label" visible="false" />
+                  <Button fx:id="customer_enter_btn_load_file_scene" disable="true" mnemonicParsing="false" onAction="#onClickEnter" prefHeight="47.0" prefWidth="140.0" styleClass="button-inherit" stylesheets="@../../resources/files/Discount.css" text="Enter" />
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
